@@ -2,55 +2,78 @@
 
 ## 1. Overview
 
-Data cleaning is the process of identifying, correcting, and handling errors, inconsistencies, and quality issues in a dataset to make it accurate, consistent, and reliable for analysis.
+Data cleaning is the process of identifying and correcting data quality issues to make a dataset accurate, consistent, and suitable for analysis.
 
-Real-world datasets often contain missing values, duplicate records, inconsistent text formats, incorrect data types, invalid values, and outliers. These issues can lead to inaccurate calculations, misleading visualizations, and incorrect analytical conclusions.
+In this project, Python is used to clean and prepare raw data by handling missing values, fixing inconsistent formatting, removing duplicate records, correcting data types, and identifying and handling outliers.
 
-In this project, Python is used to inspect, clean, validate, and prepare raw data for further analysis using libraries such as Pandas and NumPy.
+The project uses Pandas and NumPy to perform data cleaning efficiently and create a reliable dataset for further analysis.
 
-## 2. How Data Cleaning Is Performed
+## 2. Data Cleaning Process
 
-The data cleaning process follows a systematic workflow:
+### 1. Handling Missing Values
 
-1. **Load the Data:** Import the raw dataset into Python using Pandas.
-2. **Understand the Data:** Examine the dataset's structure, size, data types, statistical summaries, and overall quality.
-3. **Identify Data Quality Issues:** Detect missing values, duplicate records, inconsistent formatting, invalid entries, and unusual observations.
-4. **Handle Missing Values:** Decide whether to fill, retain, or remove missing information based on the data and analytical requirements.
-5. **Remove Duplicates:** Identify repeated records and remove accidental duplicates without deleting legitimate observations.
-6. **Standardize Data:** Correct inconsistent text formatting, unnecessary spaces, spelling variations, and formatting differences.
-7. **Correct Data Types:** Convert values into appropriate numerical, date, text, or other required formats.
-8. **Validate Data:** Check for invalid values, unexpected categories, inconsistent relationships, and violations of business rules.
-9. **Detect Outliers:** Use statistical methods and visualizations to identify unusual observations and investigate whether they are genuine or erroneous.
-10. **Verify the Results:** Compare the original and cleaned datasets to ensure that the transformations have improved data quality without introducing unintended changes.
-11. **Export the Cleaned Data:** Save the final dataset for Exploratory Data Analysis (EDA), visualization, reporting, or dashboard development.
+Missing values occur when information is unavailable or has not been recorded in the dataset. These values can affect calculations, statistical summaries, and analytical results.
+
+In this step, missing values are identified and examined. Appropriate techniques are applied to handle them, such as filling missing values with suitable statistical measures, using meaningful replacement values, or removing records when necessary.
+
+**Objective:** Reduce the impact of missing information while preserving the usefulness and integrity of the dataset.
+
+### 2. Fixing Inconsistent Formatting
+
+Inconsistent formatting occurs when the same type of information is represented differently throughout a dataset. Examples include extra spaces, inconsistent capitalization, and variations in text representation.
+
+In this step, text values are standardized, unnecessary spaces are removed, and inconsistent formats are corrected to maintain uniformity.
+
+**Objective:** Ensure consistency across the dataset and improve the accuracy of filtering, grouping, and analysis.
+
+### 3. Handling Duplicates
+
+Duplicate records are repeated entries that may inflate counts, distort calculations, and lead to inaccurate analytical results.
+
+In this step, duplicate records are identified and examined. Accidental duplicates are removed while legitimate repeated records are preserved.
+
+**Objective:** Eliminate unnecessary repetition and improve the reliability of the dataset.
+
+### 4. Correcting Data Types
+
+Data types define how values are stored and interpreted. Raw datasets may contain numerical values stored as text, dates represented as strings, or other incorrectly formatted values.
+
+In this step, data types are inspected and converted into appropriate formats. Invalid conversions are identified and reviewed to prevent unexpected data loss.
+
+**Objective:** Ensure that values are stored in suitable formats for accurate calculations, comparisons, sorting, and analysis.
+
+### 5. Handling Outliers
+
+Outliers are observations that differ significantly from the general pattern of a dataset. They may represent genuine unusual events, data-entry errors, or measurement problems.
+
+In this step, unusual observations are identified using statistical techniques and, where useful, visualizations. Each observation is evaluated before deciding whether to retain, correct, exclude, or otherwise handle it.
+
+**Objective:** Identify potentially problematic values and reduce their impact on analysis without automatically removing valid observations.
 
 ## 3. Tools and Technologies
 
-- **Python:** Main programming language used to automate the cleaning process.
-- **Pandas:** Used for loading, inspecting, transforming, and cleaning datasets.
-- **NumPy:** Used for numerical operations and handling missing or invalid numerical values.
+- **Python:** Programming language used to perform the data cleaning process.
+- **Pandas:** Used for data inspection, transformation, missing-value handling, duplicate detection, and data type correction.
+- **NumPy:** Used for numerical operations and statistical calculations.
 - **Matplotlib and Seaborn:** Used to visualize data distributions and investigate potential outliers.
-- **VS Code and Jupyter Notebook:** Used to write, execute, document, and organize the workflow.
+- **VS Code / Jupyter Notebook:** Used to write, execute, and document the cleaning workflow.
 
 ## 4. Expected Results
 
-After completing the data cleaning process, the dataset becomes more consistent, structured, and suitable for analysis.
+After completing these five data cleaning steps, the dataset is expected to be more consistent, structured, and reliable.
 
-The expected outcomes include:
+The key outcomes include:
 
-- Identification and appropriate handling of missing values.
-- Removal of accidental duplicate records.
-- Consistent formatting and standardized values.
-- Correct and appropriate data types.
-- Identification and investigation of invalid values and outliers.
-- Improved data quality and reliability.
-- A cleaned dataset ready for further analysis and visualization.
-- A repeatable workflow that can be reused for similar datasets.
-
-The objective is not simply to remove problematic records, but to improve data quality while preserving meaningful information.
+- Missing values handled using appropriate methods.
+- Inconsistent formatting standardized.
+- Accidental duplicate records removed.
+- Data types corrected for accurate processing.
+- Potential outliers identified and evaluated.
+- Improved overall data quality and analytical reliability.
+- A cleaned dataset prepared for Exploratory Data Analysis (EDA), visualization, reporting, and dashboard development.
 
 ## 5. Conclusion
 
-Data cleaning is a fundamental step in the data analytics lifecycle. Using Python, the process can be performed systematically, efficiently, and reproducibly.
+This project demonstrates a practical data cleaning workflow using Python, focusing on five essential areas: handling missing values, fixing inconsistent formatting, handling duplicates, correcting data types, and handling outliers.
 
-This project demonstrates how raw data can be transformed into a reliable dataset through data inspection, cleaning, validation, and verification. The final output provides a strong foundation for Exploratory Data Analysis, statistical analysis, reporting, and Power BI dashboard development.
+By applying these techniques systematically, raw data can be transformed into a more reliable and analysis-ready dataset. This process establishes a strong foundation for further data analysis and meaningful insights.
